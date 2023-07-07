@@ -1,0 +1,176 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1rem;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar-logo img {
+  height: 3rem;
+}
+.navbar-logo {
+  font-size: 1.3rem;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  color: #ffffff;
+  padding: 0 1rem 0 0;
+  text-decoration: none;
+  margin: 0 1rem;
+  line-height: 2rem;
+}
+.navbar-menu li a:hover {
+  transition: 0.3s;
+  color: #e0dede;
+}
+div.btn {
+  background-color: #fff;
+  padding: 0.1rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  color: #161616;
+  margin: 0 0.5rem;
+}
+li.sign a {
+  color: #161616;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 4px;
+}
+
+/* Media Query for Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-toggle.active .bar {
+    transform: rotate(45deg) translate(-2px, 3px);
+    background-color: #fff;
+  }
+}
+
+.hero {
+  height: 100vh;
+/* padding: 0 0 0 3rem; */
+  background-color: #1c1c1c;
+}
+
+/* hero-section-content */
+.hero-content {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content {
+  font-size: 2rem;
+}
+p {
+  font-size: 1rem;
+}
+button.member{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+   margin: 40px;
+    border: 2px solid #F7941D;
+    /* border-radius: 1rem; */
+   text-transform: uppercase;
+   -webkit-box-reflect:below 0px linear-gradient(transparent,#0002);
+   transition: 0.5s;
+   transition-delay:0s ;
+
+}
+button.member:hover{
+    color: #000;
+    transition-delay:1.5s ;
+    box-shadow: 0 0 10px #F7941D,
+    0 0 20px #F7941D,
+    0 0 40px #F7941D,
+    0 0 80px #F7941D,
+    0 0 160px #F7941D;
+}
+
+button.member::before{
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #F7941D;
+    box-shadow: 5px -8px 0 #F7941D,
+   5px 8px 0 #F7941D
+    ; 
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadodw 0.5s;
+    box-shadow: 0.5s;
+    transition-delay:1s,0.5s,0s,0s ;
+}
+button.member:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #F7941D,
+    5px 0 0 #F7941D;
+    transition-delay:0s,0.5s,1s,1s ;
+
+}
+button.member::after{
+    content: "";
+    position: absolute;
+    right:-20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #F7941D;
+    box-shadow: -5px -8px 0 #F7941D,
+   -5px 8px 0 #F7941D
+    ; 
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadodw 0.5s;
+    box-shadow: 0.5s;
+    transition-delay:1s,0.5s,0s,0s ;
+}button.member:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 #F7941D,
+    -5px 0 0 #F7941D;
+    transition-delay:0s,0.5s,1s,1s ;
+
+}button.member span{
+    position: relative;
+    z-index: 100;
+}
